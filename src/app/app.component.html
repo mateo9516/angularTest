@@ -1,0 +1,114 @@
+<div style="background:transparent url('/assets/ironMan.jpg') no-repeat center center /cover">
+  <div class="container">
+    <div class="container px-8">
+      <nav class="navbar navbar-expand-lg navbar-light nav-hero box-shadow: inset">
+        <div class="container-fluid d-flex justify-content-between">
+          <a class="navbar-brand" href="#">
+            <img src="/assets/Logo.png" alt="no hay imagen">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapser" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse d-md-flex justify-content-end" id="collapser">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link text-white font-weight-bold pr-3" aria-current="page" href="#">Heroes Anteriores</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white font-weight-bold pr-3" href="#">¿Cómo Funciona?</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white font-weight-bold pr-3" href="#">Iniciar sesión</a>
+              </li>
+            </ul>
+            <span style="display: inline-block;"><img class="iconImg" src="/assets/IconSearch.png" alt="no sale" height="25vw" ></span>
+          </div>
+        </div>
+      </nav>
+      <div class="card special-card" style="margin-top:30px; margin-bottom:30px;width: 31rem; height: 25rem;">
+        <div class="card-body">
+          <h6 class="card-title text-white">Dinos tu opinión sobre</h6>
+          <h1 class="card-subtitle mb-2 my-3 text-white font-weight-bold">{{ heroSelected.nombre}} ?</h1>
+          <h5 class="card-text my-5 text-white">{{ heroSelected.descrip}}</h5>
+          <img src="" alt="no">
+          <a href="#" class="card-link text-white ">Más informacion</a>
+          <div class="row no-bordered">
+                <button type="button" class="btn btn-link float-start" style="margin-left: -20px; margin-right: 0;"><img src="/assets/like.jpg" alt=""></button>
+                <button type="button" class="btn btn-link float-end" style="margin-left: -27px; margin-right: -20px;"><img src="/assets/dislike.jpg" alt=""></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="progressBar" style="height: 5rem;">
+    <div class="likes" style="width:70%; text-align: right;">
+      <span> <img class ="pr-3" src="/assets/like.png" alt="" style="display: inline;"><h1 class="text-white font-weight-bold pr-3" style="display: inline;">70%</h1></span>
+    </div>
+    <div class="dislikes" style="width:30%">
+      <span><h1 class="text-white font-weight-bold pr-3 ml-4"  style="display: inline;">30%</h1><img class ="pr-3" src="/assets/dislike.png" alt="" style="display: inline;"></span>
+    </div>
+  </div> 
+</div>
+<div class="container px-8" style="margin-top: 30px; margin-bottom: 30px;">
+  <div class="container px-8">
+    <div class="row px-3 py-3" style="background-color: rgb(238, 227, 227); display: inline-flex;">
+      <div class="col-sm-auto">
+        <h5>Lorem Ipsum. Dolor</h5>
+        <h1 class="font-weight-bold">IP lorem ip.</h1>
+      </div>
+      <div class="col">
+        <p>
+          lore ipsum dolor sit amet, consectetur adipiscing elit. Sed sed fringilla nisi. Suspendisse vel nulla non ipsum volutpat 
+          fermentum et a velit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+      </div>
+      <div class="col-sm-auto">
+        <button class="btn"><img src="/assets/cancel.png" alt=""></button>
+      </div>
+    </div>
+    <div style="margin-top: 20px; margin-bottom:20px ;">
+      <h1>
+        Super Heroes Anteriores
+      </h1>
+    </div>
+    <div class="row col-12 justify-content-around">
+      <div class="card col-5" *ngFor="let hero of heroes" style="margin-top: 40px; background-image: url('{{hero.urlImg}}'); background-repeat: no-repeat; background-position-x: center;height: 30rem;">
+        <div class="card-body d-flex align-items-end">
+          <div class="d-flex align-items-start flex-column pd-3">
+            <h3 class="card-text mb-2 my-1 text-white font-weight-bold">{{hero.nombre}}</h3>
+            <p class="card-text text-white">{{hero.descrip}}</p>
+            <button type="button" class="btn btn-outline-light">Ver detalle</button>
+            <div class="progressBar" style="height: 4rem; margin-bottom: -21px;">
+              <div class="likes" style="width:70%; text-align: right;">
+                <span><img class ="pr-3" src="/assets/like.png" alt="" style="display: inline; height: 50%;"><p class="text-white font-weight-bold pr-3" style="display: inline;height: 50%;">70%</p></span>
+              </div>
+              <div class="dislikes" style="width:30%">
+                <span><p class="text-white font-weight-bold pr-3 ml-4"  style="display: inline;height: 50%;">30%</p><img class ="pr-3" src="/assets/dislike.png" alt="" style="display: inline;height: 50%;"></span>
+              </div>
+          </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+<footer>
+  <hr>
+  <div>
+      <div class="row justify-content-between">
+          <div class="col-6">
+              <ul class="list-inline">
+                  <li class="list-inline-item">Terminos y condiciones</li>
+                  <li class="list-inline-item">Politica de tratamiento de datos</li>
+                  <li class="list-inline-item">Contactenos</li>
+              </ul>
+          </div>
+          <div class="col-3">
+              <ul class="row d-flex justify-content-around">
+                  <li class="list-inline-item">Siguenos</li>
+                  <img src="/assets/facebook.png" alt="" height="30px">
+                  <img src="/assets/twitter.png" alt="" height="30px">
+              </ul>
+          </div>
+      </div>
+  </div>
+</footer>

@@ -1,0 +1,31 @@
+.nav-hero{
+    background-color: transparent;
+}
+
+.special-card {
+      
+    background-color: rgba(0, 0, 0, 0.5);
+    }
+
+.progressBar {
+        display: block;
+        height: 20px;
+        width: 100%;
+    }
+    
+.likes {
+        background-color: rgba(27, 192, 170, 0.678);
+        float: left;
+        padding: 0px;
+        height: 100%;
+        margin: 0px;
+    }
+    
+.dislikes {
+        background-color: rgba(255, 230, 0, 0.692);
+        float: right;
+        padding: 0px;
+        margin: 0px;
+        height: 100%;
+        width: 100%;
+    }
